@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-bg-primary: #0f0f0f;
+        --color-bg-secondary: #222222;
+        --color-bg-tertiary: #3f3f3f;
+        --color-text-primary: #ffffff;
+        --color-text-secondary: #aaaaaa;
+        --color-border: #3f3f3f;
+        --color-logo: #2dd4bf; /* teal-400 */
+        --color-interactive: #2563eb; /* blue-600 */
+        --color-interactive-hover: #1d4ed8; /* blue-700 */
+      }
+      .theme-light {
+        --color-bg-primary: #ffffff;
+        --color-bg-secondary: #f2f2f2;
+        --color-bg-tertiary: #e5e5e5;
+        --color-text-primary: #0f0f0f;
+        --color-text-secondary: #606060;
+        --color-border: #cccccc;
+        --color-logo: #0d9488; /* teal-600 */
+        --color-interactive: #2563eb; /* blue-600 */
+        --color-interactive-hover: #1d4ed8; /* blue-700 */
+      }
+      body {
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        transition: background-color 0.3s, color 0.3s;
+      }
+      @keyframes like-animation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.4); }
+        100% { transform: scale(1); }
+      }
+      .like-animate {
+        animation: like-animation 0.5s ease-in-out;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'yt-black': 'var(--color-bg-primary)',
+              'yt-dark': 'var(--color-bg-secondary)',
+              'yt-dark-gray': 'var(--color-bg-tertiary)',
+              'yt-light-gray': 'var(--color-text-secondary)',
+              'yt-text-primary': 'var(--color-text-primary)',
+              'yt-border': 'var(--color-border)',
+              'yt-brand': 'var(--color-logo)',
+              'yt-interactive': 'var(--color-interactive)',
+              'yt-interactive-hover': 'var(--color-interactive-hover)',
+              'yt-red': '#ff0000',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

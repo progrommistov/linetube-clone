@@ -1,0 +1,5 @@
+{
+  "name": "Youtube copy",
+  "description": "A fully functional YouTube clone built with React, TypeScript, and Tailwind CSS. It features a homepage with a video grid, a video playback page with comments and related videos, and a responsive design for all devices.",
+  "requestFramePermissions": []
+}
